@@ -10,6 +10,7 @@ import springboot.demo.employeeservice.dto.DepartmentDto;
 import springboot.demo.employeeservice.dto.EmployeeDto;
 import springboot.demo.employeeservice.entity.Employee;
 import springboot.demo.employeeservice.repository.EmployeeRepository;
+import springboot.demo.employeeservice.service.APIClient;
 import springboot.demo.employeeservice.service.EmployeeService;
 @Service
 @AllArgsConstructor
@@ -60,6 +61,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 //                .retrieve()
 //                .bodyToMono(DepartmentDto.class)
 //                .block();
+
+       //DepartmentDto departmentDto =  apiClient.getDepartment(employee.getDepartmentCode());
 
         DepartmentDto departmentDto = apiClient.getDepartment(employee.getDepartmentCode());
 
